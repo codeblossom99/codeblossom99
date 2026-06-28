@@ -1,0 +1,88 @@
+<svg width="1000" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    .title { font-size: 34px; font-weight: 700; fill: #e6edf3; }
+    .sub { font-size: 17px; fill: #8b949e; }
+    .tag { font-size: 14px; fill: #c9d1d9; }
+    .small { font-size: 13px; fill: #8b949e; }
+    .float { animation: float 4s ease-in-out infinite; }
+    .blink { animation: blink 1s step-end infinite; }
+    .pulse { animation: pulse 1.4s ease-in-out infinite; }
+    .progress { animation: progress 3.8s ease-in-out infinite; }
+    .scan { animation: scan 5s linear infinite; opacity: .18; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: .35; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes progress {
+      0% { width: 180px; }
+      50% { width: 520px; }
+      100% { width: 180px; }
+    }
+
+    @keyframes scan {
+      0% { transform: translateY(-360px); }
+      100% { transform: translateY(360px); }
+    }
+  </style>
+
+  <rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+
+  <g class="scan">
+    <rect x="0" y="0" width="1000" height="80" fill="#58a6ff"/>
+  </g>
+
+  <rect x="70" y="55" width="860" height="250" rx="18" fill="#161b22" stroke="#30363d"/>
+
+  <rect x="70" y="55" width="860" height="42" rx="18" fill="#21262d"/>
+  <circle cx="98" cy="76" r="6" fill="#ff5f56"/>
+  <circle cx="120" cy="76" r="6" fill="#ffbd2e"/>
+  <circle cx="142" cy="76" r="6" fill="#27c93f"/>
+
+  <g class="float">
+    <circle class="pulse" cx="125" cy="135" r="7" fill="#ff4d4f"/>
+    <text x="142" y="141" class="mono small">LIVE</text>
+
+    <text x="500" y="160" text-anchor="middle" class="mono title">
+      Browser Media Engine<tspan class="blink">_</tspan>
+    </text>
+
+    <text x="500" y="195" text-anchor="middle" class="mono sub">
+      Low-Latency Streaming · Video Playback · Performance Optimization
+    </text>
+
+    <g>
+      <rect x="250" y="222" width="80" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+      <text x="290" y="242" text-anchor="middle" class="mono tag">WebRTC</text>
+
+      <rect x="345" y="222" width="72" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+      <text x="381" y="242" text-anchor="middle" class="mono tag">WASM</text>
+
+      <rect x="432" y="222" width="68" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+      <text x="466" y="242" text-anchor="middle" class="mono tag">WebGL</text>
+
+      <rect x="515" y="222" width="56" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+      <text x="543" y="242" text-anchor="middle" class="mono tag">MSE</text>
+
+      <rect x="586" y="222" width="86" height="30" rx="15" fill="#21262d" stroke="#30363d"/>
+      <text x="629" y="242" text-anchor="middle" class="mono tag">FFmpeg</text>
+    </g>
+  </g>
+
+  <rect x="115" y="276" width="770" height="8" rx="4" fill="#30363d"/>
+  <rect class="progress" x="115" y="276" height="8" rx="4" fill="#58a6ff"/>
+
+  <text x="115" y="263" class="mono small">▶ 00:21</text>
+  <text x="835" y="263" text-anchor="end" class="mono small">1080p / LIVE</text>
+</svg>
